@@ -71,20 +71,23 @@ nav {
   .nav-links {
     display: none;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: rgb(120, 238, 247);
+    margin: 0;
+    background-color: rgb(22, 62, 172);
   }
 
   .nav-links.show {
     display: flex;
+    width: 100%;
   }
 
   .nav-links li {
     text-align: center;
     margin: 10px 0;
+    width: 100%;
   }
 
   .hamburger {
@@ -102,14 +105,10 @@ nav {
   justify-content: center;
   align-items: center;
   background-image: url("/img/pearlcare\ head.png");
-  background-size: cover;
-  /* This property ensures the background image covers the entire container */
-  background-position: center;
-  /* This property centers the background image */
-  background-repeat: no-repeat;
-  /* This property ensures the background image is not repeated */
+  background-size: cover; /* This property ensures the background image covers the entire container */
+  background-position: center; /* This property centers the background image */
+  background-repeat: no-repeat; /* This property ensures the background image is not repeated */
 }
-
 .home-content {
   color: white;
   position: relative;
@@ -118,16 +117,14 @@ nav {
   margin-top: 17%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  /* Adjusted to start from the left */
+  align-items: flex-start; /* Adjusted to start from the left */
   text-align: left;
 }
 
 .first-content,
 .second-content,
 .third-content {
-  margin-bottom: 15px;
-  /* Adjusted margin for spacing */
+  margin-bottom: 15px; /* Adjusted margin for spacing */
 }
 
 .first-content {
@@ -167,13 +164,11 @@ nav {
   .second-content,
   .third-content {
     margin-bottom: 10px;
-    padding-left: 0;
-    /* Adjusted margin for spacing on small screens */
+    padding-left: 0; /* Adjusted margin for spacing on small screens */
   }
 
   .second-content {
-    font-size: 36px;
-    /* Adjusted font size for better readability on small screens */
+    font-size: 36px; /* Adjusted font size for better readability on small screens */
   }
 }
 
@@ -254,8 +249,10 @@ nav {
   .home-about-section {
     box-shadow: none;
   }
+  .home-about-img img {
+    width: 100%;
+  }
 }
-
 /* <------------home-service-section-----------> */
 
 .home-service-section {
@@ -263,7 +260,7 @@ nav {
   display: flex;
   align-items: center;
   text-align: center;
-  background-color: #9ee2fde8;
+  background-color: #9ee2fdc7;
 
   /* Added padding for better spacing */
 }
@@ -273,32 +270,25 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 80px;
-  /* Stack the content vertically */
+  padding-bottom: 80px; /* Stack the content vertically */
 }
 
 .home-service-headings {
   display: flex;
-  flex-direction: column;
-  /* Stack h2 and h1 vertically */
-  justify-content: flex-start;
-  /* Align items to the start of the flex container */
-  align-items: flex-start;
-  /* Align items to the start of the flex container */
+  flex-direction: column; /* Stack h2 and h1 vertically */
+  justify-content: flex-start; /* Align items to the start of the flex container */
+  align-items: flex-start; /* Align items to the start of the flex container */
   width: 60%;
-  margin: 0 auto;
-  /* Center the element by adding auto margin on left and right */
+  margin: 0 auto; /* Center the element by adding auto margin on left and right */
 }
 
 .home-service-headings h1,
 .home-service-headings h2 {
-  text-align: left;
-  /* Left-align h1 and h2 */
+  text-align: left; /* Left-align h1 and h2 */
   margin-bottom: 10px;
   color: black;
   font-weight: bolder;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  /* Add shadow effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
 }
 
 .home-service-headings h2 {
@@ -310,18 +300,14 @@ nav {
   width: 80%;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  /* Allow cards to wrap to the next line if there isn't enough space */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if there isn't enough space */
   justify-content: center;
   margin-bottom: 40px;
 }
-
 .card {
   position: relative;
-  width: 250px;
-  /* Increase the width to your desired value */
-  height: 250px;
-  /* Adjust the height if needed */
+  width: 250px; /* Increase the width to your desired value */
+  height: 250px; /* Adjust the height if needed */
   border-radius: 14px;
   z-index: 1111;
   overflow: hidden;
@@ -338,10 +324,8 @@ nav {
   position: absolute;
   top: 5px;
   left: 5px;
-  width: 240px;
-  /* Adjust the width to be slightly smaller than the card width */
-  height: 240px;
-  /* Adjust the height to be slightly smaller than the card height */
+  width: 240px; /* Adjust the width to be slightly smaller than the card width */
+  height: 240px; /* Adjust the height to be slightly smaller than the card height */
   z-index: 2;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(24px);
@@ -390,40 +374,21 @@ button {
   padding: 0.8em 1.8em;
   position: relative;
   overflow: hidden;
-  background-color: transparent;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
-  transition: 0.3s;
   z-index: 1;
-  background-color: #0ca1e6;
+  background-color:#0ca1e6;
   border: 1.5px solid #2697cc;
   font-family: inherit;
   color: #feffff;
   border-radius: 10px;
 }
 
-button::before {
-  content: "";
-  width: 0;
-  height: 300%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  background: #49819b;
-  transition: 0.5s ease;
-  display: block;
-  z-index: -1;
-}
-
-button:hover::before {
-  width: 105%;
-}
-
 button:hover {
-  color: #111;
+  background-color: rgb(37, 94, 141);
 }
+
 
 @media (max-width: 768px) {
   .home-service-headings {
@@ -434,9 +399,9 @@ button:hover {
     margin: 0 auto;
   }
 
-  .card {
+  .home-service-containers .card {
     width: 100%;
-    max-width: 300px;
+    max-width: 600px;
     margin-right: 0;
     margin-top: 20px;
   }
@@ -445,11 +410,9 @@ button:hover {
     width: 100%;
     max-width: 300px;
   }
-
   .home-service-headings h1 {
     font-size: 1.7rem;
-    white-space: nowrap;
-    /* Prevent line break */
+    white-space: nowrap; /* Prevent line break */
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -466,10 +429,8 @@ button:hover {
   align-items: center;
   height: 90vh;
   background-image: url("/img/home-appoinment.png");
-  background-size: cover;
-  /* This property ensures the background image covers the entire container */
-  background-position: center;
-  /* This property centers the background image */
+  background-size: cover; /* This property ensures the background image covers the entire container */
+  background-position: center; /* This property centers the background image */
   background-repeat: no-repeat;
 }
 
@@ -487,12 +448,10 @@ button:hover {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
-
 @media (max-width: 768px) {
   .appointment-container h1 {
     font-size: 2rem;
   }
-
   .appointment-container p {
     font-size: 1rem;
     margin-bottom: 30px;
@@ -535,7 +494,6 @@ button:hover {
   display: inline-block;
   transition: 0.5s;
 }
-
 .social-icon__link:hover {
   transform: translateY(-10px);
 }
@@ -561,11 +519,9 @@ button:hover {
   font-size: 1rem;
   font-weight: 400;
 }
-
 @media (max-width: 767px) {
   .footer p {
-    display: inline;
-    /* Display paragraphs in one line */
+    display: inline; /* Display paragraphs in one line */
     font-size: 0.9rem;
   }
 }
@@ -580,12 +536,9 @@ button:hover {
   justify-content: center;
   align-items: center;
   background-image: url("/img/contact-bg.png");
-  background-size: cover;
-  /* This property ensures the background image covers the entire container */
-  background-position: center;
-  /* This property centers the background image */
-  background-repeat: no-repeat;
-  /* This property ensures the background image is not repeated */
+  background-size: cover; /* This property ensures the background image covers the entire container */
+  background-position: center; /* This property centers the background image */
+  background-repeat: no-repeat; /* This property ensures the background image is not repeated */
 }
 
 .contact-content {
@@ -600,7 +553,6 @@ button:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   animation: slideInFromSide 1s ease-out;
 }
-
 @media (max-width: 768px) {
   .contact-content {
     letter-spacing: 0;
@@ -617,14 +569,12 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-
 .home-contact-section {
   max-width: 1440px;
   width: 80%;
   display: flex;
   padding-top: 50px;
 }
-
 .contact-intro {
   width: 40%;
   padding-left: 40px;
@@ -635,11 +585,9 @@ button:hover {
   flex-direction: column;
   justify-content: center;
 }
-
 .home-contact-first-tsxt {
   font-size: 25px;
 }
-
 .contact-intro p {
   margin: 0;
   font-weight: normal;
@@ -657,29 +605,24 @@ button:hover {
   margin: 0;
   color: rgba(3, 3, 3, 0.795);
 }
-
 .home-contact-item h6 {
   color: black;
   font-size: 20px;
   font-weight: bolder;
 }
-
 .home-contact-item {
   display: flex;
   margin-top: 25px;
   font-weight: 500;
 }
-
 .contactss {
   margin-top: 50px;
   margin: 0;
 }
-
 .contactpage-img {
   height: 50px;
   max-width: 50px;
 }
-
 .contact-adress-section {
   padding-left: 20px;
 }
@@ -701,8 +644,7 @@ button:hover {
 
 .contact-form-div {
   width: 60%;
-  margin: auto;
-  /* Center the form horizontally */
+  margin: auto; /* Center the form horizontally */
   margin-top: 50px;
 }
 
@@ -715,19 +657,9 @@ button:hover {
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1);
-  animation: formMovement 1s ease-in-out infinite alternate;
-  /* Add the animation */
 }
 
-@keyframes formMovement {
-  0% {
-    transform: translateX(0);
-  }
 
-  100% {
-    transform: translateX(5px);
-  }
-}
 
 .form-group {
   margin-bottom: 20px;
@@ -742,13 +674,11 @@ button:hover {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
-  /* Adjusted padding for input fields */
+  padding: 10px; /* Adjusted padding for input fields */
   box-sizing: border-box;
   border: 1px solid #70bfdffb;
   border-radius: 4px;
-  font-size: 16px;
-  /* Increased font size for better readability */
+  font-size: 16px; /* Increased font size for better readability */
 }
 
 .form-group textarea {
@@ -761,20 +691,16 @@ button:hover {
   color: #fff;
   border: none;
   width: 100%;
-  padding: 12px 20px;
-  /* Adjusted padding for the button */
+  padding: 12px 20px; /* Adjusted padding for the button */
   border-radius: 6px;
   cursor: pointer;
-  font-size: 18px;
-  /* Increased font size for better readability */
-  display: inline-block;
-  /* Align the button next to the input fields */
+  font-size: 18px; /* Increased font size for better readability */
+  display: inline-block; /* Align the button next to the input fields */
 }
 
 .form-group button:hover {
   background-color: #007bb5;
-  transform: scale(1.1);
-  /* Change the background color on hover */
+  transform: scale(1.1); /* Change the background color on hover */
 }
 
 @media screen and (max-width: 600px) {
@@ -783,11 +709,9 @@ button:hover {
   }
 }
 
-
 /* /services/
 /services/
 /services/ */
-
 
 .services-content {
   color: #fdfffe;
@@ -803,8 +727,7 @@ button:hover {
 }
 
 .services-content h6 {
-  color: #48AEF8;
-  ;
+  color: #48aef8;
 }
 
 @media (max-width: 768px) {
@@ -866,7 +789,7 @@ button:hover {
 }
 
 .candidates_card {
-  background-color: #F1F9FF;
+  background-color: #f1f9ff;
   width: 70%;
   height: auto;
   border-radius: 1rem;
@@ -890,7 +813,6 @@ button:hover {
   scale: 70%;
 }
 
-
 .candidates_card_p3 {
   text-align: left;
   font-weight: bold;
@@ -902,7 +824,7 @@ button:hover {
   width: 70%;
   height: auto;
   border-radius: 1rem;
-  border: 1px solid #48AEF8;
+  border: 1px solid #48aef8;
   text-align: center;
   margin-right: 5%;
   margin-bottom: 5%;
@@ -916,10 +838,9 @@ button:hover {
 .services_card_p1 {
   font-size: 2rem;
   font-weight: bolder;
-  color: #48AEF8;
+  color: #48aef8;
   padding-top: 1%;
 }
-
 
 .services_card_p2 {
   font-size: 0.9rem;
@@ -930,13 +851,12 @@ button:hover {
   text-align: center;
 }
 
-
 .services_card2 {
   background-color: #ffff;
   width: 70%;
   height: auto;
   border-radius: 1rem;
-  border: 1px solid #48AEF8;
+  border: 1px solid #48aef8;
   text-align: center;
   padding: 0%;
   margin-left: 5%;
@@ -948,13 +868,12 @@ button:hover {
   border-radius: 1rem;
 }
 
-
 .services_card3 {
   background-color: #ffff;
   width: 70%;
   height: auto;
   border-radius: 1rem;
-  border: 1px solid #48AEF8;
+  border: 1px solid #48aef8;
   text-align: center;
   padding: 0%;
   margin-left: 5%;
@@ -966,10 +885,6 @@ button:hover {
   border-radius: 1rem;
 }
 
-
-
-
-
 .sevices_quote2 {
   width: 100%;
   height: auto;
@@ -979,7 +894,6 @@ button:hover {
   justify-content: center;
   background-color: #000;
   color: #fff;
-
 }
 
 .sevices_quote2_content {
@@ -996,10 +910,7 @@ button:hover {
 .sevices_quote2_content2 {
   font-size: 1.2rem;
   padding: 5%;
-
 }
-
-
 
 .sevices_quote3 {
   width: 100%;
@@ -1008,9 +919,8 @@ button:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
-  background-color: #F1F9FF;
+  background-color:  #9ee2fdc7;
   color: #000;
-
 }
 
 .sevices_quote3_content {
@@ -1027,18 +937,12 @@ button:hover {
 .sevices_quote3_content2 {
   font-size: 1.2rem;
   padding: 5%;
-
 }
-
-
-
-
 
 .services_4x4cards {
   width: 100%;
   height: auto;
   margin: 0px;
-  background-color: #F1F9FF;
 }
 
 .services_4x4cards_col1 {
@@ -1066,7 +970,7 @@ button:hover {
   width: 70%;
   height: auto;
   border-radius: 1rem;
-  border: 1px solid #48AEF8;
+  border: 1px solid #48aef8;
   text-align: center;
   margin-right: 5%;
   margin-bottom: 5%;
@@ -1081,7 +985,7 @@ button:hover {
   width: 70%;
   height: auto;
   border-radius: 1rem;
-  border: 1px solid #48AEF8;
+  border: 1px solid #48aef8;
   text-align: center;
   padding: 0%;
   margin-left: 5%;
@@ -1092,23 +996,9 @@ button:hover {
   scale: 70%;
 }
 
-.bluebg{
-  background-color: #F1F9FF;
+.bluebg {
+  background-color:  #9ee2fdc7;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 768px) {
   .services_col_container_col1 {
@@ -1143,22 +1033,18 @@ button:hover {
     margin-left: 0%;
   }
 
-
-
   .services_card_p1 {
     font-size: 1.3rem;
     font-weight: bolder;
-    color: #48AEF8;
+    color: #48aef8;
     padding-top: 1%;
   }
-
-
 
   .services_4x4cards {
     width: 100%;
     height: auto;
     margin: 0px;
-    background-color: #F1F9FF;
+    
   }
 
   .services_4x4cards_col1 {
@@ -1177,28 +1063,20 @@ button:hover {
     text-align: center;
   }
 
-
-
-
-
   .services_card4x1 {
     padding: 0%;
     margin-right: 0;
   }
 
-
   .services_card4x2 {
     padding: 0%;
     margin-left: 0;
-
   }
-
-
 }
 
 /* /services/
+/services/
 /services/ */
-
 
 /* <----- jobs page ----->*/
 
@@ -1207,35 +1085,227 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 35px;
 }
 
 .job-section {
   max-width: 1440px;
   width: 80%;
-  border: 2px solid red;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align items to the start (top) */
   justify-content: space-between;
 }
 
 .job-intro {
-  width: 48%;
-  /* Adjusted width */
-  padding: 40px;
-  border: 2px solid red;
+  width: 50%;
+  padding-top: 50px;
+  padding-left: 50px;
   display: flex;
   flex-direction: column;
+  align-self: flex-start; /* Align to the start (top) of the container */
+}
 
+.job-intro h1 {
+  margin-bottom: 20px;
+  color: black;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
+.job-intro p {
+  font-size: 1rem;
 }
 
 .job-img {
   width: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end; /* Align content to the end (right) */
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(
+      20px,
+      0
+    ); /* Adjust the values for the desired movement */
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .job-img img {
   width: 80%;
   height: auto;
+  animation: moveImage 2s infinite; /* Adjust the duration and iteration count as needed */
 }
+
+.search-engine {
+  border: 2px solid rgb(124, 205, 236);
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.search-engine h4 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: black;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-engine input[type="text"] {
+  padding: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Adjust the padding to provide space for the icon */
+}
+.search-engine input {
+  border: none;
+  border-bottom: 1.5px solid rgb(124, 205, 236);
+}
+.search-engine button {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.search-engine button:hover {
+  background-color: rgb(67, 136, 192);
+}
+
+/* register with peartlcare */
+
+.registration-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #9ee2fdc7;
+}
+.reg-div {
+  width: 80%;
+  text-align: center;
+}
+
+.reg-div h1 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: black;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.reg-div  p {
+  font-size: 1rem;
+}
+
+
+
+.reg-card-div {
+width: 100%;
+display: flex;
+
+}
+
+.reg-container {
+  flex: 1;
+  /* Additional styling for the containers */
+  border: 2px solid rgb(37, 175, 230);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+}
+.reg-container h6{
+  padding-top: 25px;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.reg-div button{
+  margin-top: 25px;
+ font-size: 1.2rem;
+ font-weight: bold;
+ background-color: #0ca1e6;
+} 
+
+.reg-div button:hover {
+  background-color: rgb(37, 94, 141);
+}
+
+
+@media (max-width: 1020px) {
+  .job-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .job-img {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .job-intro {
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start; /* Align to the start (top) of the container */
+  }
+  .job-intro h1 {
+    margin-bottom: 20px;
+    color: black;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .job-intro p {
+    font-size: 1rem;
+  }
+  .search-engine button {
+    margin-top: 25px;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+  .reg-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: center;
+    text-align: center;
+  }
+  .reg-card-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: center;
+  }
+  .reg-container{
+  width: 100%;
+  max-width: 600px;
+  margin-right: 0;
+  margin-top: 20px;
+  }
+}
+
