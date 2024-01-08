@@ -3,8 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-nav {
+.nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,21 +11,28 @@ nav {
   background-color: transparent;
   padding: 10px 20px;
   z-index: 1;
-  /* Ensure the navigation bar is above the content */
+
+}
+
+.nav-logo {
+  max-width: 100%; 
+  height: auto;
+}
+.logo {
+  margin-right: auto; /* Push the logo to the left */
 }
 
 .nav-content {
+  width: 100%;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  z-index: 1;
+
 }
 
-.logo a {
-  color: rgb(248, 245, 245);
-  text-decoration: none;
-  font-size: 1.5em;
-  font-weight: bold;
-}
 
 .nav-links {
   list-style: none;
@@ -39,7 +45,6 @@ nav {
   margin-right: 100px;
   margin-top: 25px;
 }
-
 .nav-links a {
   color: rgb(248, 248, 248);
   text-decoration: none;
@@ -73,7 +78,7 @@ nav {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 100px;
     left: 0;
     margin: 0;
     background-color: rgb(22, 62, 172);
@@ -150,7 +155,7 @@ nav {
 
 .home-arrow-svg {
   margin-inline-start: 4px;
-  font-size: 56px !important;
+  font-size: 56px ;
 }
 
 @media (max-width: 768px) {
