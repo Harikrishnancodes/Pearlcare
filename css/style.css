@@ -9,17 +9,25 @@ body {
   left: 0;
   width: 100%;
   background-color: transparent;
-  padding: 10px 20px;
-  z-index: 1;
 
+  z-index: 1;
 }
 
 .nav-logo {
-  max-width: 100%; 
-  height: auto;
+  max-width: 100%;
+  height: 160px;
+
 }
 .logo {
-  margin-right: auto; /* Push the logo to the left */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+}
+.nav-content img {
+  width: 200px;
+  height: 120px;
+  margin-left: 20px;
 }
 
 .nav-content {
@@ -27,12 +35,10 @@ body {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+  align-items: start;
+  padding: 10px;
   z-index: 1;
-
 }
-
 
 .nav-links {
   list-style: none;
@@ -62,6 +68,7 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .bar {
@@ -97,6 +104,7 @@ body {
 
   .hamburger {
     display: flex;
+    margin-top: 30px;
   }
 }
 
@@ -109,13 +117,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/pearlcare\ head.png");
   background-size: cover;
-  /* This property ensures the background image covers the entire container */
   background-position: center;
-  /* This property centers the background image */
   background-repeat: no-repeat;
-  /* This property ensures the background image is not repeated */
+  transition: background-image 0.5s ease-in-out;
 }
 
 .home-content {
@@ -155,7 +160,10 @@ body {
 
 .home-arrow-svg {
   margin-inline-start: 4px;
-  font-size: 56px ;
+  font-size: 56px;
+}
+.home-content button {
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -182,6 +190,9 @@ body {
   .second-content {
     font-size: 36px;
     /* Adjusted font size for better readability on small screens */
+  }
+  .home-content button {
+    margin-top: 100px;
   }
 }
 
@@ -285,7 +296,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   /* Stack the content vertically */
 }
 
@@ -341,6 +352,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 2px solid rgb(37, 175, 230);
   box-shadow: 20px 20px 60px #b4e7f7, -20px -20px 60px #9adffa9f;
   margin-right: 50px;
   margin-top: 50px;
@@ -362,42 +374,6 @@ body {
   outline: 2px solid white;
 }
 
-.blob {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #27aaf7;
-  opacity: 1;
-  filter: blur(12px);
-  animation: blob-bounce 5s infinite ease;
-}
-
-@keyframes blob-bounce {
-  0% {
-    transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
-
-  25% {
-    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
-  }
-
-  50% {
-    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
-  }
-
-  75% {
-    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
-  }
-
-  100% {
-    transform: translate(-100%, -100%) translate3d(0, 0, 0);
-  }
-}
-
 button {
   padding: 0.8em 1.8em;
   position: relative;
@@ -417,7 +393,6 @@ button:hover {
   background-color: rgb(37, 94, 141);
 }
 
-
 @media (max-width: 768px) {
   .home-service-headings {
     display: flex;
@@ -425,6 +400,9 @@ button:hover {
     align-items: center;
     width: 60%;
     margin: 0 auto;
+  }
+  .home-service-containers {
+    width: 100%;
   }
 
   .home-service-containers .card {
@@ -436,7 +414,7 @@ button:hover {
 
   .bg {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
   }
 
   .home-service-headings h1 {
@@ -446,6 +424,7 @@ button:hover {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
 }
 
 /* <-----appoinment section-----> */
@@ -482,6 +461,9 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .appointment-container{
+    width: 90%;
+  }
   .appointment-container h1 {
     font-size: 2rem;
   }
@@ -493,73 +475,173 @@ button:hover {
 }
 
 /* <-----footer-----> */
-
-.footer {
-  position: relative;
-  width: 100%;
-  background: #f0f0f0;
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.site-footer
+{
+  background-color:#eeeff3e8;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#181717;
+}
+.site-footer hr
+{
+  border-top-color:#8f8d8d;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:black;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#1b1b1b;
+  text-decoration:none;
 }
 
-.social-icon,
-.menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
+.site-footer a:hover
+{
+  color:#5dcffc;
+  text-decoration:none;
 }
-
-.social-icon__item,
-.menu__item {
-  list-style: none;
+.footer-links
+{
+  padding-left:0;
+  list-style:none
 }
-
-.social-icon__link {
-  font-size: 2rem;
-  color: rgb(0, 0, 0);
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
+.footer-links li
+{
+  display:block
 }
-
-.social-icon__link:hover {
-  transform: translateY(-10px);
-}
-
-.menu__link {
-  font-size: 1.2rem;
-  color: black;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
+.footer-links a
+{
+  color:#0a0a0a;
   text-decoration: none;
-  opacity: 1;
-  font-weight: 500;
+  
 }
-
-.menu__link:hover {
-  color: #007bb5;
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color: #0ca1e6;
+  text-decoration:none;
 }
-
-.footer p {
-  color: black;
-  margin: 15px 0 10px 0;
-  font-size: 1rem;
-  font-weight: 400;
+.footer-links.inline li
+{
+  display:inline-block
 }
-
-@media (max-width: 767px) {
-  .footer p {
-    display: inline;
-    /* Display paragraphs in one line */
-    font-size: 0.9rem;
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color: #0ca1e6;
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px;
+    padding-left: 20px;
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0;
+    padding-left: 20px;
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#0f0f0f;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#fff;
+  color:#000000;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
   }
 }
 
@@ -709,8 +791,6 @@ button:hover {
   box-sizing: border-box;
   box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .form-group {
   margin-bottom: 20px;
@@ -1101,7 +1181,6 @@ button:hover {
     width: 100%;
     height: auto;
     margin: 0px;
-
   }
 
   .services_4x4cards_col1 {
@@ -1188,8 +1267,7 @@ button:hover {
   }
 
   50% {
-    transform: translate(20px,
-        0);
+    transform: translate(20px, 0);
     /* Adjust the values for the desired movement */
   }
 
@@ -1275,12 +1353,9 @@ button:hover {
   font-size: 1rem;
 }
 
-
-
 .reg-card-div {
   width: 100%;
   display: flex;
-
 }
 
 .reg-container {
@@ -1313,9 +1388,9 @@ button:hover {
   background-color: rgb(37, 94, 141);
 }
 
-
 @media (max-width: 1020px) {
   .job-section {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1332,12 +1407,13 @@ button:hover {
   }
 
   .job-intro {
-    width: 100%;
+    width: 80%;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    /* Align to the start (top) of the container */
+    align-items: center;
+     
   }
 
   .job-intro h1 {
