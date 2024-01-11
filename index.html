@@ -10,11 +10,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link
-      rel="icon"
-      href="../img/pearlcare-faviconBlack.svg"
-      type="image/x-icon"
-    />
+    
+    <link rel="shortcut icon" href="favicon.svg" />
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/6c53136549.js"
@@ -48,10 +45,14 @@
 
       <!-- Home -->
       <div class="home-section">
-        <img class="background-image active" src="pearlcare1.webp" alt="Image 1">
-        <img class="background-image" src="pearlcare2.webp" alt="Image 2">
-        <img class="background-image" src="pearlcare3.webp" alt="Image 3">
-        <img class="background-image" src="pearlcare4.webp" alt="Image 4">
+        <img
+          class="background-image active"
+          src="pearlcare1.webp"
+          alt="Image 1"
+        />
+        <!-- <img class="background-image" src="pearlcare2.webp" alt="Image 2" />
+        <img class="background-image" src="pearlcare3.webp" alt="Image 3" />
+        <img class="background-image" src="pearlcare4.webp" alt="Image 4" /> -->
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-md-8">
@@ -83,10 +84,12 @@
                   workers and more
                 </p>
                 <div class="home-btn-div">
-                  <button>
-                    Discover more
-                    <img src="img/Arrow.svg" alt="" class="home-arrow-svg" />
-                  </button>
+                  <a href="services.html">
+                    <button>
+                      Discover more
+                      <img src="img/Arrow.svg" alt="" class="home-arrow-svg" />
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -140,10 +143,11 @@
       <div class="container home-service-containers">
         <div class="home-service-headings">
           <h2>Our Services</h2>
-          <h1>Deserves Our Best Services</h1>
+          <h1>You Deserve Our Best Services</h1>
           <p style="margin-top: 10px">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form.
+            Where Expertise Meets Compassion: A Unified Force of Healthcare
+            Assistants, Domestic Workers, and Nurses, Dedicated to
+            Enriching Lives.
           </p>
         </div>
         <div class="home-services-content">
@@ -157,9 +161,10 @@
               <h5 style="margin-top: 20px; font-weight: bold">
                 HealthCare Assistant
               </h5>
-              <p style="text-align: justify; padding: 10px">
-                Pearlcare Recruitment excels in recruiting dedicated Healthcare
-                Assistants to bolster healthcare services in the UK.
+              <p style="text-align: center; padding: 10px">
+                Skilled healthcare assistants who prioritize the well-being and
+                comfort of those they serve. Our dedicated healthcare assistants
+                are the heartbeat of compassionate care.
               </p>
             </div>
           </div>
@@ -174,9 +179,10 @@
               <h5 style="margin-top: 20px; font-weight: bold">
                 Domestic Workers
               </h5>
-              <p style="text-align: justify; padding: 10px">
-                Pearlcare excels in recruiting reliable domestic workers,
-                enhancing households with skilled professionals across the UK.
+              <p style="text-align: center; padding: 10px">
+                From sanitation to logistics, our domestic workers ensure a
+                seamless healthcare facility, allowing medical staff to focus on
+                patient care.
               </p>
             </div>
           </div>
@@ -189,16 +195,19 @@
                 style="margin-top: 20px; width: 40px; height: 40px"
               />
               <h5 style="margin-top: 20px; font-weight: bold">Nurses</h5>
-              <p style="text-align: justify; padding: 10px">
-                Your trusted source for recruiting skilled and compassionate
-                nurses, enhancing healthcare teams across the UK.
+              <p style="text-align: center; padding: 10px">
+                Critical care, specialized treatment, or holistic patient
+                support, our nurses deliver excellence, enhancing the quality of
+                care and ensuring positive outcomes.
               </p>
             </div>
           </div>
         </div>
-        <button>
-          Learn More<img src="img/Arrow.svg" alt="" class="home-arrow-svg" />
-        </button>
+        <a href="services.html">
+          <button>
+            Learn More<img src="img/Arrow.svg" alt="" class="home-arrow-svg" />
+          </button>
+        </a>
       </div>
     </section>
     <!-- End of services -->
@@ -351,20 +360,21 @@
       }
     </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".background-image");
-    let currentIndex = 0;
+<!-- <script>
+  // JavaScript to handle image slider
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.background-image');
+    let currentImageIndex = 0;
 
-    function changeBackground() {
-      images[currentIndex].classList.remove("active");
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].classList.add("active");
+    function showNextImage() {
+      images[currentImageIndex].classList.remove('active');
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      images[currentImageIndex].classList.add('active');
     }
 
-    setInterval(changeBackground, 4000); // Change background every 4 seconds
+    setInterval(showNextImage, 5000); // Change image every 5 seconds (adjust as needed)
   });
-</script>
+</script> -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

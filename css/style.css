@@ -87,7 +87,8 @@ body {
     top: 100px;
     left: 0;
     margin: 0;
-    background-color: rgb(22, 62, 172);
+    z-index: 99999;
+    background-color: rgba(103, 138, 151, 0.884);
   }
 
   .nav-links.show {
@@ -126,16 +127,16 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.0001s ease-in-out; /* Adjust the transition duration as needed */
+  transition: opacity 0.8s ease-in-out; /* Adjust the transition duration as needed */
 }
 
 .background-image.active {
   opacity: 5;
 }
 
-.container {
-  z-index: 1; /* Ensures that the content is above the background image */
-}
+
+
+
 .home-content {
   color: white;
   position: relative;
@@ -356,7 +357,7 @@ body {
   position: relative;
   width: 250px;
   /* Increase the width to your desired value */
-  height: 250px;
+  height: 300px;
   /* Adjust the height if needed */
   border-radius: 14px;
   z-index: 1111;
@@ -369,6 +370,7 @@ body {
   box-shadow: 20px 20px 60px #b4e7f7, -20px -20px 60px #9adffa9f;
   margin-right: 50px;
   margin-top: 50px;
+  text-align: center;
 }
 
 .bg {
@@ -377,7 +379,7 @@ body {
   left: 5px;
   width: 240px;
   /* Adjust the width to be slightly smaller than the card width */
-  height: 240px;
+  height: 290px;
   /* Adjust the height to be slightly smaller than the card height */
   z-index: 2;
   background: rgba(255, 255, 255, 0.95);
@@ -411,9 +413,12 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
   }
+  
+  
   .home-service-containers {
     width: 100%;
   }
@@ -431,9 +436,8 @@ button:hover {
   }
 
   .home-service-headings h1 {
-    font-size: 1.7rem;
-    white-space: nowrap;
-    /* Prevent line break */
+    font-size: 1.4rem;
+    
     overflow: hidden;
     text-overflow: ellipsis;
   }
