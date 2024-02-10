@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .nav {
   position: absolute;
   top: 0;
@@ -192,6 +193,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-top: 120px;
   }
 
   .first-content,
@@ -207,7 +209,7 @@ body {
     /* Adjusted font size for better readability on small screens */
   }
   .home-content button {
-    margin-top: 100px;
+    margin-top: 10px;
   }
 }
 
@@ -301,7 +303,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-color: #9ee2fdc7;
+  background-color: #e1fcff;
 
   /* Added padding for better spacing */
 }
@@ -312,7 +314,6 @@ body {
   align-items: center;
   flex-direction: column;
   padding-bottom: 40px;
-  /* Stack the content vertically */
 }
 
 .home-service-headings {
@@ -345,20 +346,21 @@ body {
 }
 
 .home-services-content {
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   /* Allow cards to wrap to the next line if there isn't enough space */
   justify-content: center;
   margin-bottom: 40px;
+
 }
 
 .card {
   position: relative;
-  width: 250px;
+  width: 300px;
   /* Increase the width to your desired value */
-  height: 300px;
+  height: 320px;
   /* Adjust the height if needed */
   border-radius: 14px;
   z-index: 1111;
@@ -368,19 +370,23 @@ body {
   align-items: center;
   justify-content: center;
   border: 2px solid rgb(37, 175, 230);
-  box-shadow: 20px 20px 60px #b4e7f7, -20px -20px 60px #9adffa9f;
+
   margin-right: 50px;
   margin-top: 50px;
   text-align: center;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .bg {
   position: absolute;
   top: 5px;
   left: 5px;
-  width: 240px;
+  width: 100%;
   /* Adjust the width to be slightly smaller than the card width */
-  height: 290px;
+  height: 320px;
   /* Adjust the height to be slightly smaller than the card height */
   z-index: 2;
   background: rgba(255, 255, 255, 0.95);
@@ -389,6 +395,162 @@ body {
   overflow: hidden;
   outline: 2px solid white;
 }
+.card-mock {
+  margin-top: 50px;
+  width: 300px;
+  /* Increase the width to your desired value */
+  height: 320px;
+  border-radius: 14px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  margin-right: 50px;
+  margin-top: 50px;
+
+
+}
+
+
+.content-mock {
+  background-color:#48AEF8;
+height: 60%;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+.image-mock {
+  object-fit: cover;
+  width: 100%;
+  height: 40%;
+
+
+}
+.image-mock img{
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+.desc {
+ 
+  color: #000000;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+
+
+}
+
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: rgba(0, 0, 0, 0.685);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+
+}
+
+button:hover .button-text {
+  transform: translate(-1.7rem, 0);
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(8.7rem, 0);
+}
+
+button:active .circle .icon.arrow {
+  transform: translate(9.5rem, 0);
+  transition: all 0.3s;
+}
+
+button:active .circle {
+  transform: scale(0.9);
+  transition: all 0.3s;
+
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+button:active .button-text {
+  color: rgba(255, 255, 255, 0.459);
+}
+
 
 button {
   padding: 0.8em 1.8em;
@@ -441,6 +603,160 @@ button:hover {
     
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .card-mock {
+    margin-top: 50px;
+    width: 100%;
+    margin-right: 0;
+    /* Increase the width to your desired value */
+   
+  
+  }
+}
+/* mission-vision */
+.mission-vision {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-image: url("../img/counter-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure background covers the container */
+  background-position: center center;
+  height: auto;
+}
+
+/* Rest of your CSS remains the same */
+.mission{
+ width: 80%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background: #00000070;
+ padding: 3%;
+ border-radius: 1.5rem ;
+ z-index: 2;
+
+
+}
+.vision{
+  width: 80%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background: #00000070;
+ padding: 3%;
+ border-radius: 1.5rem ;
+ margin-top: 3rem;
+ z-index: 2;
+}
+.mission-vision h5{
+font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.mission-vision p{
+  font-size: 1.2rem;
+    color: white;
+   
+
+  }
+/* mission-vision */
+.tour-count {
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../img/mission-vision-bg.webp");
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  background-position: center center;
+  border-radius: 60px;
+  height: auto;
+  padding: 50px;
+  box-sizing: border-box;
+  opacity: 1;
+}
+/* Add a pseudo-element for the black tint */
+.tour-count::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+  border-radius: 60px;
+}
+
+/* Adjust the z-index to ensure the content is on top of the tint */
+.tour-count > * {
+  position: relative;
+  z-index: 1;
+}
+.tour-completed-list {
+  position: relative;
+  z-index: 2;
+  /* Set a higher z-index */
+  text-align: center;
+}
+
+.tour-completed-list img {
+  margin-top: 10%;
+  width: 40%;
+}
+
+.tour-completed-list h6 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+.tour-completed-list p {
+  font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tour-count {
+    flex-direction: column;
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin-top: 20px; /* Adjust margin top for smaller screens */
+    border-radius: 30px;
+    border-radius: 12px;
+    background-image: url(../img/mission-vision-mob.webp); /* Adjust border radius for smaller screens */
+  }
+
+  .tour-count::before {
+  
+    border-radius: 12px;
+  }
+
+  .tour-completed-list h6 {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .tour-completed-list p {
+    font-size: 1.4rem;
+    margin-top: 5px;
   }
 }
 
@@ -1590,3 +1906,171 @@ button:hover {
  .btn:hover::before {
   transform: translateX(0);
  }
+
+ /* faq */
+ 
+
+
+ .accordion{
+   padding:100px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+ }
+
+
+ .accordian-div {
+  width: 60%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #ddd; /* Border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box Shadow */
+}
+
+ .accordian-div h4{
+  font-size: 3rem;
+  font-weight: bold;
+
+  
+ }
+ .accordion .accordion-item {
+  width: 100%;
+
+   padding:15px 20px;
+   margin-top:20px;
+   border-radius:10px;
+   border-bottom: 2px solid black;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+ }
+ .accordion .accordion-item button[aria-expanded=true] {
+   border-bottom: 1px solid #03b5d2;
+ }
+ .accordion h2 {
+   position: relative;
+   display: block;
+   text-align: left;
+ 
+ /*    padding: 1em 0; */
+   color: #000000;
+   font-size: 1.15rem;
+   font-weight: 400;
+   border: none;
+   background: none;
+   outline: none;
+   padding:0px;
+   line-height:25px;
+   margin:0px;
+   font-family: 'Open Sans', sans-serif;
+ }
+ .accordion h2:hover, .accordion h2:focus {
+   cursor: pointer;
+   color: #03b5d2;
+ }
+ .accordion h2:hover::after, .accordion h2:focus::after {
+   cursor: pointer;
+   color: #03b5d2;
+   border: 1px solid #03b5d2;
+ }
+ .accordion h2 .accordion-title {
+   padding: 1em 1.5em 1em 0;
+ 
+ }
+ .accordion h2 .icon {
+   display: inline-block;
+   position: absolute;
+   top: 2px;
+   right: 0;
+   width: 22px;
+   height: 22px;
+   border: 1px solid;
+   border-radius: 22px;
+ }
+ .faq-content {
+     padding: 80px 0px;
+ }
+ .accordion h2 .icon::before {
+   display: block;
+   position: absolute;
+   content: "";
+   top: 9px;
+   left: 5px;
+   width: 10px;
+   height: 2px;
+   background: currentColor;
+ }
+ .accordion h2 .icon::after {
+   display: block;
+   position: absolute;
+   content: "";
+   top: 5px;
+   left: 9px;
+   width: 2px;
+   height: 10px;
+   background: currentColor;
+ }
+ .accordion h2[aria-expanded=true] {
+   color: #03b5d2;
+ }
+ .accordion h2[aria-expanded=true] .icon::after {
+   width: 0;
+ }
+ .accordion h2[aria-expanded=true] + .accordion-content {
+   opacity: 1;
+   max-height: 5000px;
+   transition: all 200ms linear;
+   will-change: opacity, max-height;
+ }
+ .accordion .accordion-content {
+   opacity: 0;
+   max-height: 0;
+   overflow: hidden;
+   transition: opacity 200ms linear, max-height 200ms linear;
+   will-change: opacity, max-height;
+ }
+ .accordion .accordion-content p {
+   font-size: 1rem;
+   font-weight: 300;
+   margin: 0px;
+   margin-top: 10px;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ @media only screen and (max-width: 768px) {
+  .accordion {
+    padding: 20px;
+  }
+  .accordian-div {
+    width: 100%;
+  }
+  .accordion .accordion-item {
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+  .accordion h2 {
+    font-size: 1rem; /* Adjusted font size */
+    position: relative; /* Ensuring position is relative for proper icon positioning */
+  }
+  .accordion h2 .accordion-title {
+    padding: 1em 1em 1em 0;
+    margin-right: 2rem; /* Increased margin to provide space */
+    position: relative; /* Ensuring position is relative for proper icon positioning */
+  }
+  .accordion h2 .icon {
+    top: 60%; /* Centering vertically */
+    transform: translateY(-50%);
+    right: 0;
+    margin-right: 0; /* Removing margin-right to prevent overlap */
+  }
+  .accordion h2 .icon::before,
+  .accordion h2 .icon::after {
+    top: 50%; /* Centering vertically */
+    transform: translateY(-50%);
+  }
+}
+
+
+
